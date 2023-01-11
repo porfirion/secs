@@ -16,6 +16,6 @@ func main() {
 	_ = secs.AddComponent(ctx, e, new(bool))
 
 	secs.Iter3[Tag, int64, *bool](ctx, func(id secs.EntityID, ct1 *Tag, ct2 *int64, ct3 **bool) {
-		fmt.Printf("Here is entity #%d with tag=\"%s\" and int64=%d and *bool=&%t", id, *ct1, *ct2, **ct3)
+		fmt.Printf("Here is entity #%d with tag=%#v and int64=%#v and *bool=%#v", id, *ct1, *ct2, *ct3)
 	})
 }
